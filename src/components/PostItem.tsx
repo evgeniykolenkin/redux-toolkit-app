@@ -1,7 +1,7 @@
 import { Post } from "../types/posts";
 import styles from "../styles.module.css";
 import cn from "classnames";
-import { ChangeEventHandler, MouseEventHandler, useState } from "react";
+import { MouseEventHandler } from "react";
 
 type Props = {
   post: Post;
