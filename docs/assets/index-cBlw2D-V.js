@@ -18360,7 +18360,7 @@ function Xk({ post: e, update: t, remove: n }) {
     ],
   });
 }
-const Mm = "/assets/preloader-hO4Pc4lB.gif";
+const Mm = "assets/preloader-hO4Pc4lB.gif";
 function Gk() {
   const [e, t] = q.useState(""),
     { data: n, isError: r, isLoading: i } = sr.useFetchPostsQuery(20),
