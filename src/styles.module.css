@@ -1,0 +1,86 @@
+.load__header {
+  display: flex;
+  gap: 15px;
+}
+
+.load__img {
+  width: 100px;
+}
+
+.posts__add {
+  padding: 10px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 30px;
+}
+
+.posts__add > textarea {
+  flex: 1;
+  resize: none;
+  padding: 5px;
+  font-size: 22px;
+  border: 1px solid green;
+  border-radius: 4px;
+  outline: none;
+}
+
+.list {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.list__title {
+  font-size: 22px;
+  padding: 10px;
+}
+
+.isLoading {
+  padding: 10px;
+  font-size: 22px;
+  color: blue;
+}
+
+.isError {
+  padding: 10px;
+  font-size: 22px;
+  color: red;
+}
+
+.posts__item {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 8px;
+  border: 1px solid gray;
+}
+
+.posts__item_title {
+  width: 400px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.btn {
+  padding: 3px;
+  width: 100px;
+  background-color: transparent;
+  border: 1px solid gray;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.posts__btn_add {
+  color: green;
+}
+
+.posts__btn_delete {
+  color: red;
+}
+
+.posts__btn_edit {
+  color: blue;
+}

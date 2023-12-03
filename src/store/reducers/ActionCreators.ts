@@ -42,7 +42,7 @@ export const fetchUsersThunk = createAsyncThunk(
       );
       return response.data;
     } catch (error) {
-      return rejectWithValue("Ошибка загрузки пользователей");
+      return rejectWithValue("Request failed with status code 404");
     }
   }
 );

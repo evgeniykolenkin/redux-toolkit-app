@@ -1,50 +1,39 @@
 import { useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "./hooks/redux";
 import { fetchUsersThunk } from "./store/reducers/ActionCreators";
+import PostContainer from "./components/PostContainer";
+import styles from "./styles.module.css";
+import loadImg from "./assets/preloader.gif";
 
 function App() {
   const { users, isLoading, error } = useAppSelector((state) => state.users);
 
   const dispatch = useAppDispatch();
 
+  // *это для случая с обычным асинхронным запросом без createAsyncThunk
   // useEffect(() => {
   //   dispatch(fetchUsers());
   // }, []);
 
+  // *это c createAsyncThunk
   useEffect(() => {
     dispatch(fetchUsersThunk());
   }, []);
 
-  if (isLoading) {
-    return (
-      <h1 style={{ fontSize: 22, color: "blue", padding: 10 }}>
-        Идёт загрузка...
-      </h1>
-    );
-  }
-
-  if (error) {
-    return (
-      <>
-        <h1 style={{ fontSize: 22, color: "red", padding: 10 }}>
-          Ошибка загрузки пользователей
-        </h1>
-        <h2 style={{ fontSize: 18, color: "pink", padding: 10 }}>{error}</h2>
-      </>
-    );
-  }
-
   return (
-    <div>
-      <h1 style={{ padding: 10, fontSize: 22 }}>Cписок пользователей:</h1>
-      <ul
-        style={{
-          padding: 10,
-          display: "flex",
-          flexDirection: "column",
-          gap: 10,
-        }}
-      >
+    <>
+      {isLoading && (
+        <div className={styles.load__header}>
+          <h1 className={styles.isLoading}>Идёт загрузка...</h1>
+          <img className={styles.load__img} src={loadImg} />
+        </div>
+      )}
+      {error ? (
+        <h1 className={styles.isError}>Ошибка загрузки пользователей</h1>
+      ) : (
+        <h1 className={styles.list__title}>Cписок пользователей:</h1>
+      )}
+      <ul className={styles.list}>
         {users.map((user) => (
           <li key={user.id}>
             <h2>
@@ -54,7 +43,8 @@ function App() {
           </li>
         ))}
       </ul>
-    </div>
+      <PostContainer />
+    </>
   );
 }
 

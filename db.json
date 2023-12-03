@@ -1,0 +1,38 @@
+{
+  "posts": [
+    {
+      "title": "жопа",
+      "body": "New Post",
+      "id": 16
+    },
+    {
+      "title": "asdsadsadasda",
+      "body": "sasdasdasd123123",
+      "id": 17
+    },
+    {
+      "title": "новая жопа",
+      "body": "новая жопа",
+      "id": 18
+    },
+    {
+      "title": "новая жопа",
+      "body": "новая жопа",
+      "id": 19
+    },
+    {
+      "title": "новая жопа",
+      "body": "новая жопа",
+      "id": 20
+    },
+    {
+      "title": "asdasdasda",
+      "body": "asdasdasda",
+      "id": 21
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}
